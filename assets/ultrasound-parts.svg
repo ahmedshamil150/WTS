@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Ultrasound parts and accessories</title>
+  <desc id="desc">An illustrated kit of ultrasound cables, battery, gel, and replacement parts.</desc>
+  <rect width="640" height="480" fill="none"/>
+  <circle cx="514" cy="92" r="105" fill="#c7e2e9"/>
+  <rect x="122" y="116" width="392" height="250" rx="20" fill="#f8fbfd" stroke="#10233e" stroke-width="8"/>
+  <path d="M122 174h392" stroke="#d1e3e8" stroke-width="7"/>
+  <rect x="160" y="207" width="112" height="105" rx="12" fill="#1264f4"/>
+  <rect x="181" y="226" width="70" height="47" rx="5" fill="#dcecf2"/>
+  <path d="M194 295h45" stroke="#dcecf2" stroke-width="8" stroke-linecap="round"/>
+  <path d="M337 222c38-18 69 2 57 34-10 28-50 30-61 58-13 31 10 51 39 48 28-3 42-28 30-47" fill="none" stroke="#10233e" stroke-width="12" stroke-linecap="round"/>
+  <path d="M402 235c28 5 47 24 47 50" fill="none" stroke="#62bfc0" stroke-width="13" stroke-linecap="round"/>
+  <circle cx="453" cy="287" r="19" fill="#62bfc0" stroke="#10233e" stroke-width="6"/>
+  <rect x="303" y="298" width="84" height="18" rx="9" fill="#dcecf2" stroke="#8eb9c5" stroke-width="5"/>
+  <path d="M158 136h110" stroke="#62bfc0" stroke-width="8" stroke-linecap="round"/>
+</svg>

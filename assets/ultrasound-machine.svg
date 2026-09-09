@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Portable ultrasound machine</title>
+  <desc id="desc">An illustrated portable ultrasound machine with screen, controls, and probe.</desc>
+  <rect width="640" height="480" fill="none"/>
+  <circle cx="520" cy="78" r="130" fill="#c7e2e9"/>
+  <path d="M130 386h390" stroke="#8eb9c5" stroke-width="8"/>
+  <rect x="174" y="82" width="292" height="190" rx="10" fill="#10233e"/>
+  <rect x="194" y="102" width="252" height="150" rx="4" fill="#62bfc0"/>
+  <path d="M216 205c30-70 48-65 68-18 18 43 35 25 57-23 19-42 36-14 55 26 21 44 32 20 53-33" fill="none" stroke="#eefbfb" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="226" cy="126" r="6" fill="#d7f4f2"/><circle cx="248" cy="126" r="6" fill="#d7f4f2"/>
+  <path d="M166 272h308l48 104H118z" fill="#f8fbfd" stroke="#10233e" stroke-width="7"/>
+  <path d="M187 303h80M187 325h50M187 347h106" stroke="#8eb9c5" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="344" cy="322" r="28" fill="#1264f4"/><circle cx="344" cy="322" r="10" fill="#dcecf2"/>
+  <circle cx="406" cy="314" r="10" fill="#10233e"/><circle cx="436" cy="314" r="10" fill="#10233e"/><circle cx="406" cy="344" r="10" fill="#10233e"/><circle cx="436" cy="344" r="10" fill="#10233e"/>
+  <path d="M488 319c37 10 58 37 50 70-6 25-29 39-49 29-19-10-16-32-3-45 13-13 13-27 2-38Z" fill="#10233e"/>
+  <path d="M489 317c-31 34-43 70-36 105" fill="none" stroke="#10233e" stroke-width="9" stroke-linecap="round"/>
+</svg>
