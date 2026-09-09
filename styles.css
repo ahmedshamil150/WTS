@@ -382,9 +382,42 @@ body{background-color:var(--paper);background-image:linear-gradient(rgba(29,43,4
 .home-hero-copy .eyebrow{justify-content:center}
 .home-hero-copy .hero-text{margin-left:auto;margin-right:auto;padding-left:0;border-left:0}
 .home-hero-copy .hero-actions{justify-content:center}
-.home-hero .hero-actions>a{width:210px;height:54px;padding:0;display:inline-flex;align-items:center;justify-content:center}
+.home-hero .hero-actions>a{width:210px;height:54px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:0;background:var(--blue);color:#fff}
+.home-hero .hero-actions .text-link{position:relative}
+.home-hero .hero-actions .text-link span{position:absolute;right:16px}
+.home-hero-copy{background:rgba(0,0,0,.58);border-radius:14px;padding:32px 36px}
+.home-hero-copy h1{color:#fff}
+.home-hero-copy .hero-text{color:#fff}
 
 .home-header .brand-pill,.home-header .nav-pill,.home-header .header-cta-pill{background:#10233e;border-color:#10233e;color:#fff}
 .home-header .main-nav a{color:#fff}
 .home-header .brand-pill small{color:var(--home-accent)}
 .home-header .header-cta-pill:hover{background:#1264f4;border-color:#1264f4;color:#fff}
+
+@media(max-width:600px){
+  .section-wrap{width:calc(100% - 36px)}
+  .home-header{width:calc(100% - 24px);height:58px;gap:8px}
+  .home-header .brand-pill{padding:7px 10px 7px 7px;gap:7px}
+  .home-header .brand-pill img{width:30px;height:30px}
+  .home-header .brand strong{font-size:13px}
+  .home-header .brand small{font-size:7px}
+  .home-hero{min-height:620px;height:auto;padding:142px 18px 92px}
+  .home-hero-copy{width:100%;max-width:100%;margin-top:0}
+  .home-hero-copy{padding:24px 18px}
+  .home-hero h1{max-width:100%;font-size:clamp(40px,13vw,54px);line-height:.98}
+  .home-hero .hero-text{max-width:100%;font-size:13px}
+  .home-hero .hero-actions{width:100%;flex-direction:column;gap:12px}
+  .home-hero .hero-actions>a{width:min(210px,100%);height:52px}
+  .hero-controls{right:18px;left:18px;justify-content:center}
+  .home-hero .hero-slide::after{display:none}
+  .home-about-details{gap:20px;flex-wrap:wrap}
+  .home-about-details>div{min-width:110px}
+  .solutions-dark .section-heading{grid-template-columns:1fr}
+  .solutions-dark .product-image{height:190px}
+  .contact-copy2 h2,.contact h2{font-size:42px}
+}
+
+@media(max-width:800px){
+  .home-page .home-header{left:0;transform:none;width:100%;padding-inline:12px}
+  .home-page .site-header .main-nav{left:0;right:0;width:auto}
+}
