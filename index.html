@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Wellness Technical Solutions supplies dependable ultrasound systems for confident clinical care.">
+  <meta name="description" content="Wellness Technical Solutions supplies dependable ultrasound systems, probes, parts and accessories for healthcare teams nationwide.">
   <title>Wellness Technical Solutions | Ultrasound, made clear</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="pillnav.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 </head>
 <body class="home-page">
-  <div class="announcement home-announcement"><div class="announcement-contact"><span class="status-dot"></span><a href="mailto:hello@wellnesstechnical.com">hello@wellnesstechnical.com</a><a href="tel:+18005559871">+1 (800) 555-WTS1</a></div><div class="announcement-socials" aria-label="Social media links"><a href="https://www.linkedin.com/company/wellness-technical-solutions" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.2H1.8V22h3.4V8.2ZM3.5 2A2 2 0 1 0 3.5 6a2 2 0 0 0 0-4ZM22.2 14.1c0-4.2-2.2-6.2-5.2-6.2-2.4 0-3.5 1.3-4.1 2.2V8.2H9.5V22h3.4v-7.1c0-1.9.4-3.8 2.8-3.8 2.3 0 2.3 2.1 2.3 3.9V22h3.4l.8-7.9Z"/></svg></a><a href="https://www.facebook.com/profile.php?id=61593964842309" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 22v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V4.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H8.2V14H11v8h3.2Z"/></svg></a><a href="https://www.instagram.com/wellnesstechnicalsolutions?stkn=MXV2OWM1dnJ4aGMxbQ==" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.7" r="1" class="social-dot"/></svg></a></div></div>
+
+  <!-- ── Top nav ── -->
   <div class="pill-nav-container">
-    <nav class="pill-nav" style="--base: rgba(8,20,35,.85); --pill-bg: #fff; --hover-text: #10233e; --pill-text: #10233e;">
+    <nav class="pill-nav" style="--base: rgba(13,31,60,.9); --pill-bg: #fff; --hover-text: #0d1f3c; --pill-text: #0d1f3c;">
       <a class="pill-logo" href="index.html" aria-label="Home">
         <img src="assets/logo.png" alt="Wellness Technical Solutions logo">
       </a>
@@ -67,7 +68,8 @@
             </a>
           </li>
         </ul>
-      <a href="contact.html" class="pill-cta-button desktop-only">Request a quote</a> </div>
+        <a href="contact.html" class="pill-cta-button desktop-only">Request a quote</a>
+      </div>
       <button class="mobile-menu-button mobile-only" aria-label="Toggle menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -85,80 +87,276 @@
   </div>
 
   <main id="top">
-    <section class="hero home-hero">
+
+    <!-- ── Hero ── -->
+    <section class="home-hero" aria-label="Homepage hero">
       <div class="hero-slides" aria-live="polite">
         <article class="hero-slide is-active" style="--slide-image:url('assets/hero1%20(1).webp')"></article>
-        <article class="hero-slide" style="--slide-image:url('assets/hero1%20(2).webp')"></article>
-        <article class="hero-slide" style="--slide-image:url('assets/hero1%20(3).webp')"></article>
+        <article class="hero-slide"           style="--slide-image:url('assets/hero1%20(2).webp')"></article>
+        <article class="hero-slide"           style="--slide-image:url('assets/hero1%20(3).webp')"></article>
       </div>
-      <div class="hero-copy home-hero-copy reveal">
+
+      <div class="home-hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Imaging supply specialists</p>
         <h1>Equipment that<br>keeps care <em>moving.</em></h1>
-        <p class="hero-text">Shop dependable ultrasound machines, matched probes, and hard-to-find parts with practical guidance from a team that knows the room.</p>
-        <div class="hero-actions"><a class="button button-primary" href="products.html">Browse products</a><a class="text-link" href="#contact">Request a quote <span aria-hidden="true">→</span></a></div>
+        <p class="hero-text">Dependable ultrasound machines, matched probes, and hard-to-find parts — with practical guidance from a team that knows the room.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="products.html">Browse products</a>
+          <a class="text-link" href="#contact">Request a quote <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <div class="hero-controls" aria-label="Slide navigation">
+        <button class="hero-arrow hero-prev" aria-label="Previous slide">&#8592;</button>
+        <div class="hero-dots" role="tablist">
+          <button class="hero-dot is-active" role="tab" aria-label="Slide 1" aria-current="true"></button>
+          <button class="hero-dot"           role="tab" aria-label="Slide 2"></button>
+          <button class="hero-dot"           role="tab" aria-label="Slide 3"></button>
+        </div>
+        <button class="hero-arrow hero-next" aria-label="Next slide">&#8594;</button>
       </div>
     </section>
 
+    <!-- ── About ── -->
     <section id="about" class="home-about section-wrap" aria-labelledby="about-title">
-      <div class="home-about-image"><img src="assets/home%20about.webp" alt="Clinician reviewing an ultrasound image with a patient"></div>
-      <div class="home-about-content"><p class="eyebrow"><span class="eyebrow-line"></span> About WTS</p><h2 id="about-title">Good equipment.<br><em>Clear guidance.</em></h2><p>Wellness Technical Solutions helps healthcare teams find dependable ultrasound systems, probes, parts, and accessories without the guesswork.</p><p>We listen to how your team works, then recommend compatible equipment that keeps your room ready and your next step clear.</p><div class="home-about-details"><div><strong>15+</strong><span>years in healthcare technology</span></div><div><strong>24h</strong><span>typical support response</span></div></div><a class="text-link" href="about.html">Get to know WTS <span>→</span></a></div>
+      <div class="home-about-image reveal">
+        <img src="assets/home%20about.webp" alt="Clinician reviewing an ultrasound image with a patient" loading="lazy">
+      </div>
+      <div class="home-about-content reveal reveal-delay-1">
+        <p class="eyebrow"><span class="eyebrow-line"></span> About WTS</p>
+        <h2 id="about-title">Good equipment.<br><em>Clear guidance.</em></h2>
+        <p>Wellness Technical Solutions helps healthcare teams find dependable ultrasound systems, probes, parts, and accessories without the guesswork.</p>
+        <p>We listen to how your team works, then recommend compatible equipment that keeps your room ready and your next step clear.</p>
+        <div class="home-about-details">
+          <div>
+            <strong>15+</strong>
+            <span>Years in healthcare technology</span>
+          </div>
+          <div>
+            <strong>24h</strong>
+            <span>Typical support response</span>
+          </div>
+        </div>
+        <a class="text-link" href="about.html">Get to know WTS <span>→</span></a>
+      </div>
     </section>
 
-    <section id="why-us" class="manifesto section-wrap"><div class="manifesto-mark">WTS<span>+</span></div><div><p class="eyebrow"><span class="eyebrow-line"></span> The WTS difference</p><h2>Supplying equipment is only<br>the beginning.</h2><p class="manifesto-copy">We believe supplying medical technology should feel less like an order and more like a partnership. That means honest recommendations, reliable parts and systems, and real people when you need them.</p><a class="text-link light-link" href="#contact">Meet your supply partner <span>→</span></a></div></section>
+    <!-- ── Products (dark) ── -->
+    <section id="products" class="solutions-dark" aria-labelledby="products-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> What we supply</p>
+          <h2 id="products-title">The right tool<br><em>for every scan.</em></h2>
+        </div>
+        <p>From full cart-based systems to a single replacement probe — we help you find the right match and keep your room running.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card product-featured" data-category="systems">
+          <div class="product-top">
+            <span class="product-cat">Ultrasound systems</span>
+            <span class="product-arrow">↗</span>
+          </div>
+          <div class="product-image">
+            <img src="assets/machines%20(1).webp" alt="Ultrasound machine" loading="lazy">
+          </div>
+          <div class="product-info">
+            <h3>Ultrasound machines</h3>
+            <p>Cart-based and portable systems for clinics, practices, and mobile care teams.</p>
+            <a class="product-cta" href="contact.html">Ask about systems <span>→</span></a>
+          </div>
+        </article>
+        <article class="product-card" data-category="probes">
+          <div class="product-top">
+            <span class="product-cat">Probes &amp; transducers</span>
+            <span class="product-arrow">↗</span>
+          </div>
+          <div class="product-image">
+            <img src="assets/probr.webp" alt="Ultrasound probe" loading="lazy">
+          </div>
+          <div class="product-info">
+            <h3>Probes &amp; transducers</h3>
+            <p>Convex, linear, phased-array, and specialty probes matched to your system.</p>
+            <a class="product-cta" href="contact.html">Ask about probes <span>→</span></a>
+          </div>
+        </article>
+        <article class="product-card card-dark" data-category="parts">
+          <div class="product-top">
+            <span class="product-cat">Parts &amp; accessories</span>
+            <span class="product-arrow">↗</span>
+          </div>
+          <div class="product-image">
+            <img src="assets/accessories.webp" alt="Ultrasound accessories" loading="lazy">
+          </div>
+          <div class="product-info">
+            <h3>Parts &amp; accessories</h3>
+            <p>Cables, batteries, boards, gel, carts, covers and more for a wide range of systems.</p>
+            <a class="product-cta" href="contact.html">Ask about parts <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <section id="faqs" class="faqs section-wrap" aria-labelledby="faq-title"><div class="faq-intro"><p class="eyebrow"><span class="eyebrow-line"></span> Questions, answered</p><h2 id="faq-title">The details<br><em>made clear.</em></h2><p>Need help choosing a system, probe, or part? Start here, then reach out when you are ready.</p><a class="text-link" href="#contact">Ask our team <span>→</span></a></div><div class="faq-list"><details open><summary>Which ultrasound machine is right for my practice?</summary><p>Tell us about your specialty, room size, workflow, and budget. We will help compare portable and cart-based systems that fit your day-to-day work.</p></details><details><summary>Can you match a probe to my existing machine?</summary><p>Yes. Share the make and model of your system, or send us the part number, and we will confirm compatibility before you order.</p></details><details><summary>Do you sell replacement parts and accessories?</summary><p>Yes. We source batteries, cables, boards, gel, and other ultrasound accessories for a range of systems.</p></details><details><summary>How quickly can I get a quote?</summary><p>Most requests receive a clear response within 24 hours. Include the equipment or part details you have so we can move quickly.</p></details></div></section>
+    <!-- ── Manifesto ── -->
+    <section id="why-us" class="manifesto section-wrap" aria-labelledby="manifesto-title">
+      <div class="manifesto-mark reveal">WTS<span>+</span></div>
+      <div class="reveal reveal-delay-1">
+        <p class="eyebrow"><span class="eyebrow-line"></span> The WTS difference</p>
+        <h2 id="manifesto-title">Supplying equipment is only<br>the beginning.</h2>
+        <p class="manifesto-copy">We believe supplying medical technology should feel less like an order and more like a partnership — honest recommendations, reliable parts, and real people when you need them.</p>
+        <a class="text-link light-link" href="#contact">Meet your supply partner <span>→</span></a>
+      </div>
+    </section>
 
-    <section id="reviews" class="reviews section-wrap" aria-labelledby="reviews-title"><div class="reviews-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> What partners say</p><h2 id="reviews-title">Trusted by teams<br><em>who keep moving.</em></h2></div><div class="reviews-rating"><strong>4.9</strong><span>★★★★★</span><small>Average partner rating</small></div></div><div class="review-grid"><article class="review-card"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“WTS helped us find a compatible probe quickly and explained every option clearly. The whole process felt straightforward.”</blockquote><div class="review-author"><strong>Dr. Maya Reynolds</strong><span>Imaging Director, Northside Clinic</span></div></article><article class="review-card"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“We needed a dependable portable system without overbuying. Their guidance helped us choose with confidence.”</blockquote><div class="review-author"><strong>Jordan Lee</strong><span>Practice Manager, Clearview Health</span></div></article><article class="review-card"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“When a replacement part became urgent, the WTS team responded fast and made sure it matched our machine.”</blockquote><div class="review-author"><strong>Alex Morgan</strong><span>Operations Lead, Westbrook Imaging</span></div></article></div></section>
+    <!-- ── FAQs ── -->
+    <section id="faqs" class="faqs" aria-labelledby="faq-title">
+      <div class="faq-intro reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Questions, answered</p>
+        <h2 id="faq-title">The details<br><em>made clear.</em></h2>
+        <p>Need help choosing a system, probe, or part? Start here, then reach out when you're ready.</p>
+        <a class="text-link" href="#contact">Ask our team <span>→</span></a>
+      </div>
+      <div class="faq-list reveal reveal-delay-1">
+        <details open>
+          <summary>Which ultrasound machine is right for my practice?</summary>
+          <p>Tell us about your specialty, room size, workflow, and budget. We will help compare portable and cart-based systems that fit your day-to-day work.</p>
+        </details>
+        <details>
+          <summary>Can you match a probe to my existing machine?</summary>
+          <p>Yes. Share the make and model of your system, or send us the part number, and we will confirm compatibility before you order.</p>
+        </details>
+        <details>
+          <summary>Do you sell replacement parts and accessories?</summary>
+          <p>Yes. We source batteries, cables, boards, gel, and other ultrasound accessories for a range of systems.</p>
+        </details>
+        <details>
+          <summary>How quickly can I get a quote?</summary>
+          <p>Most requests receive a clear response within 24 hours. Include the equipment or part details you have so we can move quickly.</p>
+        </details>
+      </div>
+    </section>
 
-    <section id="contact" class="contact section-wrap"><div class="contact-copy"><p class="eyebrow"><span class="eyebrow-line"></span> Start a conversation</p><h2>Tell us what<br><em>you need.</em></h2><p>Systems, probes, parts, or custom sourcing — tell us a little about your practice and we’ll come back with a clear next step.</p><div class="contact-details"><span>hello@wellnesstechnical.com</span><span>+1 (800) 555-WTS1</span></div></div><form class="contact-form" id="contact-form"><label for="name">Your name<input id="name" name="name" type="text" placeholder="Dr. Jane Smith" required></label><label for="email">Work email<input id="email" name="email" type="email" placeholder="you@practice.com" required></label><label for="interest">I’m interested in<select id="interest" name="interest"><option>Ultrasound systems</option><option>Probes &amp; transducers</option><option>Parts &amp; accessories</option><option>Custom sourcing / something else</option></select></label><button class="button button-primary" type="submit">Send inquiry <span aria-hidden="true">↗</span></button><p class="form-message" aria-live="polite"></p></form></section>
+    <!-- ── Reviews ── -->
+    <section id="reviews" class="reviews" aria-labelledby="reviews-title">
+      <div class="reviews-heading reveal">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> What partners say</p>
+          <h2 id="reviews-title">Trusted by teams<br><em>who keep moving.</em></h2>
+        </div>
+        <div class="reviews-rating">
+          <strong>4.9</strong>
+          <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <small>Average partner rating</small>
+        </div>
+      </div>
+      <div class="review-grid">
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"WTS helped us find a compatible probe quickly and explained every option clearly. The whole process felt straightforward."</blockquote>
+          <div class="review-author">
+            <strong>Dr. Maya Reynolds</strong>
+            <span>Imaging Director, Northside Clinic</span>
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"We needed a dependable portable system without overbuying. Their guidance helped us choose with confidence."</blockquote>
+          <div class="review-author">
+            <strong>Jordan Lee</strong>
+            <span>Practice Manager, Clearview Health</span>
+          </div>
+        </article>
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"When a replacement part became urgent, the WTS team responded fast and made sure it matched our machine."</blockquote>
+          <div class="review-author">
+            <strong>Alex Morgan</strong>
+            <span>Operations Lead, Westbrook Imaging</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── Contact ── -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="contact-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Start a conversation</p>
+        <h2 id="contact-title">Tell us what<br><em>you need.</em></h2>
+        <p>Systems, probes, parts, or custom sourcing — tell us a little about your practice and we'll come back with a clear next step.</p>
+        <div class="contact-details">
+          <a href="mailto:hello@wellnesstechnical.com">hello@wellnesstechnical.com</a>
+          <span>+1 (800) 555-WTS1</span>
+        </div>
+      </div>
+      <form class="contact-form reveal reveal-delay-1" id="contact-form" novalidate>
+        <label for="name">Your name
+          <input id="name" name="name" type="text" placeholder="Dr. Jane Smith" required>
+        </label>
+        <label for="email">Work email
+          <input id="email" name="email" type="email" placeholder="you@practice.com" required>
+        </label>
+        <label for="interest">I'm interested in
+          <select id="interest" name="interest">
+            <option>Ultrasound systems</option>
+            <option>Probes &amp; transducers</option>
+            <option>Parts &amp; accessories</option>
+            <option>Custom sourcing / something else</option>
+          </select>
+        </label>
+        <button class="button" type="submit">Send inquiry <span aria-hidden="true">↗</span></button>
+        <p class="form-message" aria-live="polite"></p>
+      </form>
+    </section>
+
   </main>
 
   <footer class="site-footer">
-  <div class="footer-main">
-    <div class="footer-brand-block">
-      <a class="brand footer-brand" href="index.html">
-        <img src="assets/logo.png" alt="">
-        <span><strong>Wellness</strong><small>Technical Solutions</small></span>
-      </a>
-      <p>Dependable ultrasound systems, probes, parts, and practical support for healthcare teams.</p>
-      <div class="footer-socials">
-        <a href="https://www.linkedin.com/company/wellness-technical-solutions" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.2H1.8V22h3.4V8.2ZM3.5 2A2 2 0 1 0 3.5 6a2 2 0 0 0 0-4ZM22.2 14.1c0-4.2-2.2-6.2-5.2-6.2-2.4 0-3.5 1.3-4.1 2.2V8.2H9.5V22h3.4v-7.1c0-1.9.4-3.8 2.8-3.8 2.3 0 2.3 2.1 2.3 3.9V22h3.4l.8-7.9Z"/></svg>
+    <div class="footer-main">
+      <div class="footer-brand-block">
+        <a class="footer-brand" href="index.html">
+          <img src="assets/logo.png" alt="">
+          <span><strong>Wellness</strong><small>Technical Solutions</small></span>
         </a>
-        <a href="https://www.facebook.com/profile.php?id=61593964842309" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 22v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V4.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H8.2V14H11v8h3.2Z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/wellnesstechnicalsolutions?stkn=MXV2OWM1dnJ4aGMxbQ==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.7" r="1" class="social-dot"/></svg>
-        </a>
+        <p>Dependable ultrasound systems, probes, parts, and practical support for healthcare teams nationwide.</p>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/company/wellness-technical-solutions" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.2H1.8V22h3.4V8.2ZM3.5 2A2 2 0 1 0 3.5 6a2 2 0 0 0 0-4ZM22.2 14.1c0-4.2-2.2-6.2-5.2-6.2-2.4 0-3.5 1.3-4.1 2.2V8.2H9.5V22h3.4v-7.1c0-1.9.4-3.8 2.8-3.8 2.3 0 2.3 2.1 2.3 3.9V22h3.4l.8-7.9Z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61593964842309" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 22v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V4.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H8.2V14H11v8h3.2Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/wellnesstechnicalsolutions" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.7" r="1" class="social-dot"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="products.html">Products</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="footer-column">
+        <h3>Shop</h3>
+        <a href="products.html">Ultrasound machines</a>
+        <a href="products.html">Ultrasound probes</a>
+        <a href="products.html">Parts &amp; accessories</a>
+        <a href="contact.html">Request a quote</a>
+      </div>
+      <div class="footer-column footer-contact">
+        <h3>Contact</h3>
+        <a href="mailto:hello@wellnesstechnical.com">hello@wellnesstechnical.com</a>
+        <a href="tel:+18005559871">+1 (800) 555-WTS1</a>
+        <span>Mon&ndash;Fri, 8am&ndash;6pm</span>
+        <span>Serving clinics nationwide</span>
       </div>
     </div>
-    <div class="footer-column">
-      <h3>Explore</h3>
-      <a href="index.html">Home</a>
-      <a href="about.html">About us</a>
-      <a href="products.html">Products</a>
-      <a href="blog.html">Blog</a>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Wellness Technical Solutions</span>
+      <span>Clear guidance. Dependable equipment.</span>
     </div>
-    <div class="footer-column">
-      <h3>Shop</h3>
-      <a href="products.html">Ultrasound machines</a>
-      <a href="products.html">Ultrasound probes</a>
-      <a href="products.html">Parts &amp; accessories</a>
-      <a href="contact.html">Request a quote</a>
-    </div>
-    <div class="footer-column footer-contact">
-      <h3>Contact</h3>
-      <a href="mailto:hello@wellnesstechnical.com">hello@wellnesstechnical.com</a>
-      <a href="tel:+18005559871">+1 (800) 555-WTS1</a>
-      <span>Mon&ndash;Fri, 8am&ndash;6pm</span>
-      <span>Serving clinics nationwide</span>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; 2026 Wellness Technical Solutions</span>
-    <span>Clear guidance. Dependable equipment.</span>
-  </div>
-</footer>
+  </footer>
+
   <script src="script.js"></script>
   <script src="pillnav.js"></script>
 </body>
