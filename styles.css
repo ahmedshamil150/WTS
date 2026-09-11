@@ -264,30 +264,7 @@ body{background-color:var(--paper);background-image:linear-gradient(rgba(29,43,4
 .solutions-dark .card-dark .product-image{background:#d5e8ed}
 .solutions-dark .product-link,.solutions-dark .product-card::after{color:var(--home-accent)}
 @media(max-width:800px){.solutions-dark{padding:78px 18px 90px}.solutions-dark .product-grid{border-left:0}.solutions-dark .product-card{border-right:0}}
-.solutions-dark{background:#eef4f8;color:var(--ink)}
-.solutions-dark .section-heading{border-bottom-color:var(--ink)}
-.solutions-dark .section-heading h2{color:var(--ink)}
-.solutions-dark .section-heading>p{color:var(--muted)}
-.solutions-dark .product-grid{border-left-color:var(--line)}
-.solutions-dark .product-card{border-right-color:var(--line);border-bottom-color:var(--line)}
-.solutions-dark .product-card:hover{background:#e1edf3}
-.solutions-dark .product-card.card-dark{background:#dbe8ef;color:var(--ink)}
-.solutions-dark .product-card.card-dark:hover{background:#cddfe8}
-.solutions-dark .product-top{border-bottom-color:var(--line)}
-.solutions-dark .product-info h3{color:var(--ink)}
-.solutions-dark .product-info p{color:var(--muted)}
-.solutions-dark{background:var(--ink);color:var(--paper)}
-.solutions-dark .section-heading{border-bottom-color:rgba(255,255,255,.35)}
-.solutions-dark .section-heading h2{color:var(--paper)}
-.solutions-dark .section-heading>p{color:#b9c4d1}
-.solutions-dark .product-grid{border-left-color:rgba(255,255,255,.24)}
-.solutions-dark .product-card{border-right-color:rgba(255,255,255,.24);border-bottom-color:rgba(255,255,255,.24)}
-.solutions-dark .product-card:hover{background:#1d3856}
-.solutions-dark .product-card.card-dark{background:#091a2d;color:var(--paper)}
-.solutions-dark .product-card.card-dark:hover{background:#132c47}
-.solutions-dark .product-top{border-bottom-color:rgba(255,255,255,.24)}
-.solutions-dark .product-info h3{color:var(--paper)}
-.solutions-dark .product-info p{color:#b9c4d1}
+
 .home-page .manifesto{background:#eef4f8;color:var(--ink)}
 .home-page .manifesto .eyebrow{color:var(--blue)}
 .home-page .manifesto h2{color:var(--ink)}
