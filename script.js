@@ -1,28 +1,71 @@
 /* ─── Hero slider ─────────────────────────────────────── */
 const heroSlides = document.querySelectorAll('.hero-slide');
 const heroDots   = document.querySelectorAll('.hero-dot');
+const heroRegion = document.querySelector('.home-hero');
 let heroIndex = 0;
 let heroTimer;
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 const showHeroSlide = (next) => {
   heroIndex = (next + heroSlides.length) % heroSlides.length;
-  heroSlides.forEach((s, i) => s.classList.toggle('is-active', i === heroIndex));
+  heroSlides.forEach((s, i) => {
+    const active = i === heroIndex;
+    s.classList.toggle('is-active', active);
+    s.setAttribute('aria-hidden', active ? 'false' : 'true');
+  });
   heroDots.forEach((d, i) => {
     d.classList.toggle('is-active', i === heroIndex);
     d.setAttribute('aria-current', i === heroIndex ? 'true' : 'false');
   });
 };
 
-const restartHeroTimer = () => {
-  clearInterval(heroTimer);
+const stopHeroTimer = () => clearInterval(heroTimer);
+
+const startHeroTimer = () => {
+  stopHeroTimer();
+  if (!heroSlides.length || reduceMotion.matches || document.hidden) return;
   heroTimer = setInterval(() => showHeroSlide(heroIndex + 1), 6000);
 };
 
 if (heroSlides.length) {
-  document.querySelector('.hero-prev')?.addEventListener('click', () => { showHeroSlide(heroIndex - 1); restartHeroTimer(); });
-  document.querySelector('.hero-next')?.addEventListener('click', () => { showHeroSlide(heroIndex + 1); restartHeroTimer(); });
-  heroDots.forEach((d, i) => d.addEventListener('click', () => { showHeroSlide(i); restartHeroTimer(); }));
-  restartHeroTimer();
+  showHeroSlide(0);
+
+  document.querySelector('.hero-prev')?.addEventListener('click', () => { showHeroSlide(heroIndex - 1); startHeroTimer(); });
+  document.querySelector('.hero-next')?.addEventListener('click', () => { showHeroSlide(heroIndex + 1); startHeroTimer(); });
+  heroDots.forEach((d, i) => d.addEventListener('click', () => { showHeroSlide(i); startHeroTimer(); }));
+
+  // Pause while hovered or focused inside the hero
+  heroRegion?.addEventListener('mouseenter', stopHeroTimer);
+  heroRegion?.addEventListener('mouseleave', startHeroTimer);
+  heroRegion?.addEventListener('focusin', stopHeroTimer);
+  heroRegion?.addEventListener('focusout', (e) => {
+    if (!heroRegion.contains(e.relatedTarget)) startHeroTimer();
+  });
+
+  // Arrow keys while focus is on the slide controls
+  heroRegion?.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft')  { showHeroSlide(heroIndex - 1); startHeroTimer(); }
+    if (e.key === 'ArrowRight') { showHeroSlide(heroIndex + 1); startHeroTimer(); }
+  });
+
+  // Touch swipe
+  let touchStartX = null;
+  heroRegion?.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+  heroRegion?.addEventListener('touchend', (e) => {
+    if (touchStartX === null) return;
+    const delta = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(delta) > 50) {
+      showHeroSlide(delta < 0 ? heroIndex + 1 : heroIndex - 1);
+      startHeroTimer();
+    }
+    touchStartX = null;
+  }, { passive: true });
+
+  document.addEventListener('visibilitychange', () => (document.hidden ? stopHeroTimer() : startHeroTimer()));
+  reduceMotion.addEventListener('change', startHeroTimer);
+  startHeroTimer();
 }
 
 /* ─── Review scroll carousel ───────────────────────────── */
@@ -40,15 +83,69 @@ if (reviewGrid) {
   reviewGrid.replaceChildren(track);
 }
 
-/* ─── Contact form ─────────────────────────────────────── */
+/* ─── Contact form validation (mock submit) ───────────── */
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+const setFieldError = (field, text) => {
+  const label = field.closest('label');
+  if (!label) return;
+  let error = label.querySelector('.field-error');
+  if (!error) {
+    error = document.createElement('span');
+    error.className = 'field-error';
+    error.id = `${field.id}-error`;
+    label.appendChild(error);
+  }
+  error.textContent = text;
+  field.setAttribute('aria-invalid', 'true');
+  field.setAttribute('aria-describedby', error.id);
+};
+
+const clearFieldError = (field) => {
+  const label = field.closest('label');
+  label?.querySelector('.field-error')?.remove();
+  field.removeAttribute('aria-invalid');
+  field.removeAttribute('aria-describedby');
+};
+
+const firstInvalidField = (form) => {
+  let first = null;
+  form.querySelectorAll('input[required], select[required]').forEach(field => {
+    const value = field.value.trim();
+    if (!value) {
+      setFieldError(field, 'This field is required.');
+      first ||= field;
+    } else if (field.type === 'email' && !EMAIL_PATTERN.test(value)) {
+      setFieldError(field, 'Enter a valid email address.');
+      first ||= field;
+    } else {
+      clearFieldError(field);
+    }
+  });
+  return first;
+};
+
 const form    = document.querySelector('#contact-form');
 const message = document.querySelector('.form-message');
+
 form?.addEventListener('submit', e => {
   e.preventDefault();
+  const invalid = firstInvalidField(form);
+  if (invalid) {
+    message.textContent = 'Please check the highlighted fields.';
+    message.classList.add('is-error');
+    invalid.focus();
+    return;
+  }
+  message.classList.remove('is-error');
   const name = new FormData(form).get('name');
   const first = name?.split(' ')[0].replace(/[.,]+$/, '');
   message.textContent = `Thanks${first ? `, ${first}` : ''}. A WTS specialist will be in touch shortly.`;
   form.reset();
+});
+
+form?.querySelectorAll('input, select').forEach(field => {
+  field.addEventListener('input', () => clearFieldError(field));
 });
 
 /* ─── Product filter (Products page) ───────────────────── */
@@ -74,7 +171,8 @@ if (pageHero) {
     blog:     { name: 'blog',     background: '#162024', line: '#d8ffe1', glow: '#32825b', accent: '#9fe0a8' },
     contact:  { name: 'contact',  background: '#21111d', line: '#ffe0f0', glow: '#a4316a', accent: '#ff94c1' },
   };
-  const theme = themes[pageName] || themes.about;
+  const key = Object.keys(themes).find(k => pageName === k || pageName.startsWith(`${k}-`)) || 'about';
+  const theme = themes[key];
   pageHero.classList.add(`page-hero--${theme.name}`);
   mountGhostFibers(pageHero, theme);
 }
@@ -189,3 +287,38 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ─── Stat count-up ─────────────────────────────────────── */
+const countObserver = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    obs.unobserve(el);
+
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.dataset.suffix || '';
+    if (reduceMotion.matches) {
+      el.textContent = target + suffix;
+      return;
+    }
+
+    const duration = 1200;
+    const start = performance.now();
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / duration);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))) + suffix;
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  });
+}, { threshold: 0.6 });
+
+document.querySelectorAll('[data-count]').forEach(el => countObserver.observe(el));
+
+/* ─── Sticky mobile CTA ─────────────────────────────────── */
+const mobileCta = document.querySelector('.mobile-cta');
+if (mobileCta) {
+  const toggleCta = () => mobileCta.classList.toggle('is-visible', window.scrollY > 480);
+  toggleCta();
+  window.addEventListener('scroll', toggleCta, { passive: true });
+}

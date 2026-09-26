@@ -4,8 +4,46 @@ function initPillNav() {
   const hamburger = document.querySelector('.mobile-menu-button');
   const mobileMenu = document.querySelector('.mobile-menu-popover');
   const logo = document.querySelector('.pill-logo');
+  const hasGsap = typeof window.gsap !== 'undefined';
+
+  // ── Mobile menu (works with or without GSAP) ───────────
+  if (hamburger && mobileMenu) {
+    if (!mobileMenu.id) mobileMenu.id = 'mobile-menu';
+    hamburger.setAttribute('aria-controls', mobileMenu.id);
+    hamburger.setAttribute('aria-expanded', 'false');
+
+    var setMenu = function(open) {
+      mobileMenu.classList.toggle('open', open);
+      hamburger.classList.toggle('is-open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+      document.body.classList.toggle('nav-locked', open);
+    };
+
+    var isOpen = function() { return mobileMenu.classList.contains('open'); };
+
+    hamburger.addEventListener('click', function() { setMenu(!isOpen()); });
+
+    mobileMenu.querySelectorAll('.mobile-menu-link').forEach(function(link) {
+      link.addEventListener('click', function() { setMenu(false); });
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && isOpen()) { setMenu(false); hamburger.focus(); }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (isOpen() && !mobileMenu.contains(e.target) && !hamburger.contains(e.target)) setMenu(false);
+    });
+
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768 && isOpen()) setMenu(false);
+    });
+  }
 
   if (!pills.length) return;
+
+  // ── Hover circle geometry (GSAP only) ──────────────────
+  if (!hasGsap) return;
 
   // Layout circles
   function layoutCircles() {
@@ -46,6 +84,7 @@ function initPillNav() {
   }
 
   // Hover animations
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   pills.forEach(function(pill, i) {
     var circle = pill.querySelector('.hover-circle');
     var label = pill.querySelector('.pill-label');
@@ -64,12 +103,12 @@ function initPillNav() {
 
     pill.addEventListener('mouseenter', function() {
       gsap.killTweensOf(tl);
-      tl.tweenTo(tl.duration(), { duration: 0.3, ease: 'power3.easeOut', overwrite: 'auto' });
+      tl.tweenTo(tl.duration(), { duration: reduced.matches ? 0 : 0.3, ease: 'power3.easeOut', overwrite: 'auto' });
     });
 
     pill.addEventListener('mouseleave', function() {
       gsap.killTweensOf(tl);
-      tl.tweenTo(0, { duration: 0.2, ease: 'power3.easeOut', overwrite: 'auto' });
+      tl.tweenTo(0, { duration: reduced.matches ? 0 : 0.2, ease: 'power3.easeOut', overwrite: 'auto' });
     });
   });
 
@@ -77,51 +116,9 @@ function initPillNav() {
   if (logo) {
     var logoImg = logo.querySelector('img');
     logo.addEventListener('mouseenter', function() {
-      if (!logoImg) return;
+      if (!logoImg || reduced.matches) return;
       gsap.set(logoImg, { rotate: 0 });
       gsap.to(logoImg, { rotate: 360, duration: 0.2, ease: 'power3.easeOut', overwrite: 'auto' });
-    });
-  }
-
-  // Mobile menu
-  if (hamburger && mobileMenu) {
-    gsap.set(mobileMenu, { visibility: 'hidden', opacity: 0, scaleY: 1 });
-    var isOpen = false;
-
-    hamburger.addEventListener('click', function() {
-      isOpen = !isOpen;
-      var lines = hamburger.querySelectorAll('.hamburger-line');
-
-      if (isOpen) {
-        gsap.to(lines[0], { rotation: 45, y: 3, duration: 0.3, ease: 'power3.easeOut' });
-        gsap.to(lines[1], { rotation: -45, y: -3, duration: 0.3, ease: 'power3.easeOut' });
-        gsap.set(mobileMenu, { visibility: 'visible' });
-        gsap.fromTo(mobileMenu,
-          { opacity: 0, y: 10, scaleY: 1 },
-          { opacity: 1, y: 0, scaleY: 1, duration: 0.3, ease: 'power3.easeOut', transformOrigin: 'top center' }
-        );
-      } else {
-        gsap.to(lines[0], { rotation: 0, y: 0, duration: 0.3, ease: 'power3.easeOut' });
-        gsap.to(lines[1], { rotation: 0, y: 0, duration: 0.3, ease: 'power3.easeOut' });
-        gsap.to(mobileMenu, {
-          opacity: 0, y: 10, scaleY: 1, duration: 0.2, ease: 'power3.easeOut', transformOrigin: 'top center',
-          onComplete: function() { gsap.set(mobileMenu, { visibility: 'hidden' }); }
-        });
-      }
-    });
-
-    // Close mobile menu on link click
-    mobileMenu.querySelectorAll('.mobile-menu-link').forEach(function(link) {
-      link.addEventListener('click', function() {
-        isOpen = false;
-        var lines = hamburger.querySelectorAll('.hamburger-line');
-        gsap.to(lines[0], { rotation: 0, y: 0, duration: 0.3, ease: 'power3.easeOut' });
-        gsap.to(lines[1], { rotation: 0, y: 0, duration: 0.3, ease: 'power3.easeOut' });
-        gsap.to(mobileMenu, {
-          opacity: 0, y: 10, duration: 0.2, ease: 'power3.easeOut',
-          onComplete: function() { gsap.set(mobileMenu, { visibility: 'hidden' }); }
-        });
-      });
     });
   }
 }

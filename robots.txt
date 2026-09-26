@@ -1,0 +1,6 @@
+# Wellness Technical Solutions — robots.txt
+User-agent: *
+Allow: /
+
+# Uncomment and replace the domain once the site is live:
+# Sitemap: https://YOUR-DOMAIN/sitemap.xml
