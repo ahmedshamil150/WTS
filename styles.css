@@ -1011,8 +1011,9 @@ main[tabindex="-1"]:focus {
 
 .product-image {
   height: 200px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 16px;
   background: rgba(255, 255, 255, .06);
   border-radius: var(--radius-sm);
@@ -2131,13 +2132,16 @@ body:not(.home-page) .announcement {
   aspect-ratio: 4/3;
   border-radius: var(--radius);
   background: linear-gradient(135deg, var(--paper), var(--line));
-  display: grid;
-  place-items: center;
-  color: var(--muted);
-  font: 800 14px Manrope;
-  text-align: center;
-  padding: 24px;
+  overflow: hidden;
   border: 1px solid var(--line);
+}
+
+.story-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .stats {
