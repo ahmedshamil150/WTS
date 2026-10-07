@@ -246,8 +246,14 @@ main[tabindex="-1"]:focus {
     padding: 6px 16px;
   }
 
+  .announcement {
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+
   .announcement-contact {
     gap: 12px;
+    flex-wrap: wrap;
   }
 
   .announcement-contact a {
@@ -649,15 +655,30 @@ main[tabindex="-1"]:focus {
 }
 
 .hero-slide {
-  background-image: linear-gradient(to right,
-      rgba(13, 31, 60, .92) 0%,
-      rgba(13, 31, 60, .72) 40%,
-      rgba(13, 31, 60, .22) 100%), var(--slide-image);
-  background-size: cover;
-  background-position: center;
+  background: var(--navy);
   opacity: 0;
   transform: scale(1.05);
   transition: opacity 1.1s ease, transform 7.5s ease;
+}
+
+.hero-slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right,
+      rgba(13, 31, 60, .92) 0%,
+      rgba(13, 31, 60, .72) 40%,
+      rgba(13, 31, 60, .22) 100%);
+  pointer-events: none;
 }
 
 .hero-slide.is-active {
@@ -1072,6 +1093,7 @@ main[tabindex="-1"]:focus {
   margin-top: auto;
 }
 
+.product-info h2,
 .product-info h3 {
   font-size: 20px;
   color: #fff;
@@ -1533,6 +1555,12 @@ main[tabindex="-1"]:focus {
 
 .contact-details a:hover {
   color: #fff;
+}
+
+.contact-details .contact-address {
+  color: rgba(255, 255, 255, .55);
+  font-weight: 400;
+  max-width: 340px;
 }
 
 .contact-form {
@@ -2003,6 +2031,7 @@ body:not(.home-page) .announcement {
   color: var(--teal);
 }
 
+.products .product-info h2,
 .products .product-info h3 {
   color: var(--navy);
 }
@@ -2051,6 +2080,20 @@ body:not(.home-page) .announcement {
   color: var(--muted);
 }
 
+.blog .category-note {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  color: var(--navy);
+}
+
+.blog .category-note h3 {
+  color: var(--navy);
+}
+
+.blog .category-note p {
+  color: var(--muted);
+}
+
 /* Product images */
 .product-card.hidden {
   display: none;
@@ -2061,6 +2104,7 @@ body:not(.home-page) .announcement {
   border-color: var(--navy);
 }
 
+.products .product-card.card-dark .product-info h2,
 .products .product-card.card-dark .product-info h3 {
   color: #fff;
 }
@@ -2324,6 +2368,7 @@ body:not(.home-page) .announcement {
   margin-bottom: 10px;
 }
 
+.blog-body h2,
 .blog-body h3 {
   font-size: 18px;
   margin: 0 0 8px;
@@ -2405,6 +2450,17 @@ body:not(.home-page) .announcement {
   color: var(--muted);
   line-height: 1.8;
   margin-bottom: 18px;
+}
+
+.article-body p a {
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.article-body p a:hover {
+  color: var(--navy);
 }
 
 .article-body h2 {
@@ -2544,7 +2600,7 @@ body:not(.home-page) .announcement {
 
 .contact-info {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-bottom: 56px;
 }
@@ -2573,6 +2629,7 @@ body:not(.home-page) .announcement {
   margin-bottom: 14px;
 }
 
+.info-card h2,
 .info-card h3 {
   font-size: 16px;
   color: var(--navy);
@@ -2675,6 +2732,12 @@ body:not(.home-page) .announcement {
 .contact-page .contact-form input[aria-invalid="true"],
 .contact-page .contact-form select[aria-invalid="true"] {
   border-bottom-color: #b3261e;
+}
+
+@media (max-width: 1100px) {
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 800px) {

@@ -2,5 +2,4 @@
 User-agent: *
 Allow: /
 
-# Uncomment and replace the domain once the site is live:
-# Sitemap: https://YOUR-DOMAIN/sitemap.xml
+Sitemap: https://www.wellnesstechsolutions.pk/sitemap.xml
