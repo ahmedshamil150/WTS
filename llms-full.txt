@@ -1,0 +1,87 @@
+# Wellness Technical Solutions (WTS) — Full reference
+
+> Machine-readable company, product and service reference for AI assistants and search engines.
+> Last updated: 2026-10-08. Canonical site: https://www.wellnesstechsolutions.pk
+
+## 1. Company overview
+
+Wellness Technical Solutions (WTS) is a medical imaging equipment supplier based in Rawalpindi, Punjab, Pakistan. WTS supplies ultrasound machines, probes (transducers), spare parts and accessories to hospitals, clinics, diagnostic centres and mobile imaging teams, and helps customers identify the correct replacement part or probe for an existing system.
+
+- Legal / trading name: Wellness Technical Solutions (short name: WTS)
+- Industry: Medical equipment supply — diagnostic ultrasound
+- Country: Pakistan (PK)
+- City: Rawalpindi, Punjab
+- Address: House No 615-D, Ground Portion, Near Muhammadi Masjid, Lane No. 05, Peshawar Road, Rawalpindi, Punjab, Pakistan
+- Email: wellnesstechnicalsolutions@gmail.com
+- Phone (office): +92 51 5167348
+- Phone (mobile / WhatsApp): +92 345 5020029
+- Business hours: Monday–Friday, 08:00–18:00 Pakistan Standard Time (UTC+5)
+- Languages: English, Urdu
+- Social: LinkedIn (linkedin.com/company/wellness-technical-solutions), Facebook (facebook.com/profile.php?id=61593964842309), Instagram (instagram.com/wellnesstechnicalsolutions)
+
+## 2. What WTS supplies
+
+### Ultrasound systems
+- Cart-based (full-size) systems for radiology, OB/GYN, cardiology and shared-service departments
+- Portable and compact (laptop / cart-portable) systems for bedside, mobile and satellite clinics
+- Room-ready packages: system, probes, cart and consumables supplied together
+
+### Probes and transducers
+- Convex (curved) probes — abdominal, obstetric, gynaecological, urology
+- Linear probes — vascular, musculoskeletal, small parts, vascular access
+- Phased-array probes — cardiac and echocardiography
+- Specialty probes — endocavitary, TEE, needle guidance
+- Matching is done against the system brand/model and connector type
+
+### Parts and accessories
+- OEM cables and probe cables, battery packs, mainboards, power supplies
+- Ultrasound gel, probe covers, printer media, keyboards, rolling carts and trolleys
+- Sourced against customer part numbers for a wide range of system brands
+
+## 3. How to work with WTS (process)
+
+1. The customer sends the machine brand and model, and for parts/probes the part number or connector type, plus intended clinical use and timing.
+2. WTS checks compatibility and replies with compatible options, availability and pricing — normally within one business day.
+3. Photo or product details can be shared after first contact.
+4. Quote requests are sent through https://www.wellnesstechsolutions.pk/contact#quote-form, by email to wellnesstechnicalsolutions@gmail.com, or by phone.
+
+## 4. Website map (canonical URLs)
+
+- Home: https://www.wellnesstechsolutions.pk/
+- Products: https://www.wellnesstechsolutions.pk/products
+- About: https://www.wellnesstechsolutions.pk/about
+- Blog: https://www.wellnesstechsolutions.pk/blog
+- Contact: https://www.wellnesstechsolutions.pk/contact
+- Article — How to identify the right ultrasound probe: https://www.wellnesstechsolutions.pk/blog-probe-guide
+- Article — The small parts that keep a system moving: https://www.wellnesstechsolutions.pk/blog-system-parts
+- Article — What to include in an equipment request: https://www.wellnesstechsolutions.pk/blog-equipment-request
+
+## 5. Frequently asked questions
+
+**Do you sell used or refurbished ultrasound machines?**
+WTS supplies ultrasound systems and works with customers to match a machine to their clinical use and budget. Ask through the quote form for current availability.
+
+**Can you match a probe to my existing machine?**
+Yes. Send the machine brand and model (and connector type if known). WTS identifies compatible convex, linear, phased-array or specialty probes.
+
+**Can you source a specific part by number?**
+Yes. Send the part number and system model; WTS sources cables, batteries, boards, power supplies and consumables against it.
+
+**Do you deliver across Pakistan?**
+Yes — WTS serves healthcare teams across Pakistan, with the office in Rawalpindi (Punjab).
+
+**How fast do you reply?**
+Usually within one business day, Monday–Friday.
+
+**How do I request a quote?**
+Use https://www.wellnesstechsolutions.pk/contact#quote-form, email wellnesstechnicalsolutions@gmail.com, or call +92 51 5167348.
+
+## 6. Editorial / AI usage note
+
+Content on wellnesstechsolutions.pk (guides, checklists, product descriptions) may be quoted and cited with attribution and a link to the canonical URL. For commercial reuse of full text or images, contact wellnesstechnicalsolutions@gmail.com. Business facts in this file (contact details, address, hours) are authoritative and may be used directly in answers.
+
+## 7. Technical files
+
+- llms.txt: https://www.wellnesstechsolutions.pk/llms.txt
+- Sitemap: https://www.wellnesstechsolutions.pk/sitemap.xml
+- Robots: https://www.wellnesstechsolutions.pk/robots.txt

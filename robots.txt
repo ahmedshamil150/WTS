@@ -1,5 +1,46 @@
 # Wellness Technical Solutions — robots.txt
+# https://www.wellnesstechsolutions.pk
+
 User-agent: *
 Allow: /
 
+# ── AI / LLM crawlers (Generative Engine Optimization) ──
+# Site is public commercial content; citation and answer engines are welcome.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# ── Sitemaps ──
 Sitemap: https://www.wellnesstechsolutions.pk/sitemap.xml
+
+# ── LLM context files (Generative Engine Optimization) ──
+# /llms.txt and /llms-full.txt are publicly readable for AI assistants.

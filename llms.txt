@@ -1,0 +1,33 @@
+# Wellness Technical Solutions (WTS)
+
+> Supplier of ultrasound machines, probes/transducers, parts and accessories for hospitals, clinics and diagnostic centres in Pakistan. Based in Rawalpindi, Punjab. Offers machine sourcing, probe matching by connector, part-number sourcing, room-ready setups and technical guidance.
+
+Wellness Technical Solutions (WTS) is a Pakistani medical-imaging equipment supplier. Core offering: cart-based and portable ultrasound systems, convex/linear/phased-array and specialty probes, and OEM parts and consumables (cables, batteries, boards, gel, carts, covers). Customers send the machine brand/model and part number; WTS replies with compatible options, availability and pricing, typically within one business day.
+
+- [Home](https://www.wellnesstechsolutions.pk/): Overview, services and quote request
+- [Products](https://www.wellnesstechsolutions.pk/products): Ultrasound systems, probes and parts catalogue
+- [About](https://www.wellnesstechsolutions.pk/about): Who we are, how we work
+- [Blog](https://www.wellnesstechsolutions.pk/blog): Buying guides and technical notes
+- [Contact](https://www.wellnesstechsolutions.pk/contact): Phone, email, office address and quote form
+
+## Key articles
+
+- [How to identify the right ultrasound probe](https://www.wellnesstechsolutions.pk/blog-probe-guide): Checklist for matching a replacement transducer — connector, clinical use, condition and what to send us
+- [The small parts that keep a system moving](https://www.wellnesstechsolutions.pk/blog-system-parts): Cables, batteries, boards and consumables — what keeps a room booked and how to source parts quickly
+- [What to include in an equipment request](https://www.wellnesstechsolutions.pk/blog-equipment-request): The four details that turn a request into a fast, accurate quote
+
+## Contact
+
+- Email: wellnesstechnicalsolutions@gmail.com
+- Phone: +92 51 5167348 (office), +92 345 5020029 (mobile/WhatsApp)
+- Address: House No 615-D, Ground Portion, Near Muhammadi Masjid, Lane No. 05, Peshawar Road, Rawalpindi, Punjab, Pakistan
+- Hours: Monday–Friday, 08:00–18:00 (PKT)
+- LinkedIn: https://www.linkedin.com/company/wellness-technical-solutions
+- Facebook: https://www.facebook.com/profile.php?id=61593964842309
+- Instagram: https://www.instagram.com/wellnesstechnicalsolutions
+
+## Optional
+
+- [Full company and product details (LLM-readable)](https://www.wellnesstechsolutions.pk/llms-full.txt)
+- [Sitemap](https://www.wellnesstechsolutions.pk/sitemap.xml)
+- [Robots](https://www.wellnesstechsolutions.pk/robots.txt)

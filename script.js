@@ -128,8 +128,14 @@ const firstInvalidField = (form) => {
 const form    = document.querySelector('#contact-form');
 const message = document.querySelector('.form-message');
 
-form?.addEventListener('submit', e => {
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/wellnesstechnicalsolutions@gmail.com';
+const SUPPORT_EMAIL = 'wellnesstechnicalsolutions@gmail.com';
+
+let sending = false;
+
+form?.addEventListener('submit', async e => {
   e.preventDefault();
+  if (sending) return;
   const invalid = firstInvalidField(form);
   if (invalid) {
     message.textContent = 'Please check the highlighted fields.';
@@ -138,10 +144,33 @@ form?.addEventListener('submit', e => {
     return;
   }
   message.classList.remove('is-error');
-  const name = new FormData(form).get('name');
-  const first = name?.split(' ')[0].replace(/[.,]+$/, '');
-  message.textContent = `Thanks${first ? `, ${first}` : ''}. A WTS specialist will be in touch shortly.`;
-  form.reset();
+
+  const button    = form.querySelector('button[type="submit"]');
+  const firstName = new FormData(form).get('name')?.split(' ')[0].replace(/[.,]+$/, '');
+  const success   = `Thanks${firstName ? `, ${firstName}` : ''}. A WTS specialist will be in touch shortly.`;
+
+  sending = true;
+  form.setAttribute('aria-busy', 'true');
+  button?.setAttribute('disabled', '');
+
+  try {
+    const payload = Object.fromEntries(new FormData(form).entries());
+    const res = await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) throw new Error(`FormSubmit responded with ${res.status}`);
+    message.textContent = success;
+    form.reset();
+  } catch {
+    message.textContent = `Something went wrong. Please email us at ${SUPPORT_EMAIL}.`;
+    message.classList.add('is-error');
+  } finally {
+    sending = false;
+    form.removeAttribute('aria-busy');
+    button?.removeAttribute('disabled');
+  }
 });
 
 form?.querySelectorAll('input, select').forEach(field => {
