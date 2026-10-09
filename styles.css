@@ -34,6 +34,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 128px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -1896,8 +1897,8 @@ main[tabindex="-1"]:focus {
 
 /* ── INNER PAGE: ANNOUNCEMENT + NAV spacing ──────────────── */
 body:not(.home-page) .pill-nav-container {
-  position: relative;
-  top: 0;
+  position: sticky;
+  top: 36px;
   left: 0;
   transform: none;
   width: 100%;
@@ -1906,6 +1907,7 @@ body:not(.home-page) .pill-nav-container {
   padding: 12px max(24px, calc((100% - var(--max-w)) / 2));
   display: flex;
   justify-content: center;
+  z-index: 100;
 }
 
 body:not(.home-page) .pill-nav {
@@ -1914,6 +1916,9 @@ body:not(.home-page) .pill-nav {
 }
 
 body:not(.home-page) .announcement {
+  position: sticky;
+  top: 0;
+  z-index: 101;
   background: var(--navy);
 }
 
@@ -2878,7 +2883,7 @@ button {
 }
 
 .home-page .pill-nav-container {
-  position: absolute;
+  position: fixed;
   top: 14px;
   left: 50%;
   transform: translateX(-50%);
