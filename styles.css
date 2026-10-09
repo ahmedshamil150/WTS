@@ -1641,6 +1641,67 @@ main[tabindex="-1"]:focus {
   color: #ff9b86;
 }
 
+.label-hint {
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: .75;
+}
+
+/* ── Floating contact buttons ─────────────────────────── */
+.floating-contact {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.float-btn {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 10px 26px rgba(13, 31, 60, .3);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.float-btn:hover,
+.float-btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(13, 31, 60, .35);
+}
+
+.float-btn svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+}
+
+.float-whatsapp {
+  background: #25d366;
+}
+
+.float-call {
+  background: #0d1f3c;
+}
+
+@media (max-width: 768px) {
+  .floating-contact {
+    right: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .float-btn {
+    width: 56px;
+    height: 56px;
+  }
+}
+
 .contact-form input[aria-invalid="true"],
 .contact-form select[aria-invalid="true"] {
   border-color: #ff9b86;
@@ -2195,7 +2256,7 @@ body:not(.home-page) .announcement {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   padding: 32px 0;
-  margin: 56px 0;
+  margin: 56px auto;
 }
 
 .stats>div {
@@ -2312,7 +2373,7 @@ body:not(.home-page) .announcement {
 
 /* ── BLOG PAGE ───────────────────────────────────────────── */
 .blog {
-  padding: 0 0 90px;
+  padding: 48px 0 90px;
 }
 
 .blog-grid {
@@ -2602,7 +2663,10 @@ body:not(.home-page) .announcement {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+  margin-top: -48px;
   margin-bottom: 56px;
+  position: relative;
+  z-index: 2;
 }
 
 .info-card {
@@ -2610,11 +2674,14 @@ body:not(.home-page) .announcement {
   border-radius: var(--radius);
   padding: 26px;
   border: 1px solid var(--line);
-  transition: border-color .2s;
+  box-shadow: 0 20px 45px rgba(13, 31, 60, .14);
+  transition: border-color .2s, transform .2s, box-shadow .2s;
 }
 
 .info-card:hover {
   border-color: var(--teal);
+  transform: translateY(-3px);
+  box-shadow: 0 26px 55px rgba(13, 31, 60, .18);
 }
 
 .info-icon {
@@ -2743,6 +2810,7 @@ body:not(.home-page) .announcement {
 @media (max-width: 800px) {
   .contact-info {
     grid-template-columns: 1fr;
+    margin-top: -28px;
   }
 
   .contact-row {

@@ -68,21 +68,6 @@ if (heroSlides.length) {
   startHeroTimer();
 }
 
-/* ─── Review scroll carousel ───────────────────────────── */
-const reviewGrid = document.querySelector('.review-grid');
-if (reviewGrid) {
-  const track = document.createElement('div');
-  track.className = 'review-track';
-  const cards = [...reviewGrid.children];
-  cards.forEach(c => track.appendChild(c));
-  cards.forEach(c => {
-    const dup = c.cloneNode(true);
-    dup.setAttribute('aria-hidden', 'true');
-    track.appendChild(dup);
-  });
-  reviewGrid.replaceChildren(track);
-}
-
 /* ─── Contact form validation (mock submit) ───────────── */
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -110,9 +95,11 @@ const clearFieldError = (field) => {
 
 const firstInvalidField = (form) => {
   let first = null;
-  form.querySelectorAll('input[required], select[required]').forEach(field => {
+  form.querySelectorAll('input[required], select[required], input[type="email"]').forEach(field => {
     const value = field.value.trim();
-    if (!value) {
+    if (!value && !field.required) {
+      clearFieldError(field);
+    } else if (!value) {
       setFieldError(field, 'This field is required.');
       first ||= field;
     } else if (field.type === 'email' && !EMAIL_PATTERN.test(value)) {
