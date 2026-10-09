@@ -150,6 +150,7 @@ form?.addEventListener('submit', async e => {
     if (!res.ok) throw new Error(`FormSubmit responded with ${res.status}`);
     message.textContent = success;
     form.reset();
+    setTimeout(() => { window.location.href = '/thank-you'; }, 900);
   } catch {
     message.textContent = `Something went wrong. Please email us at ${SUPPORT_EMAIL}.`;
     message.classList.add('is-error');
