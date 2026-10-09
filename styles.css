@@ -1963,6 +1963,10 @@ body:not(.home-page) .announcement {
   --hero-line: #ffe0f0;
 }
 
+.contact-hero {
+  min-height: 460px;
+}
+
 .page-hero::after {
   content: '';
   position: absolute;
@@ -2025,6 +2029,10 @@ body:not(.home-page) .announcement {
   .page-hero {
     min-height: 260px;
     padding: 36px 20px;
+  }
+
+  .contact-hero {
+    min-height: 340px;
   }
 
   .page-hero h1 {
