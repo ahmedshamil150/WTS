@@ -1965,6 +1965,7 @@ body:not(.home-page) .announcement {
 
 .contact-hero {
   min-height: 460px;
+  padding-bottom: 110px;
 }
 
 .page-hero::after {
@@ -2033,6 +2034,7 @@ body:not(.home-page) .announcement {
 
   .contact-hero {
     min-height: 340px;
+    padding-bottom: 70px;
   }
 
   .page-hero h1 {
