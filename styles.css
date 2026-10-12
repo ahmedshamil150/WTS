@@ -2429,6 +2429,24 @@ body:not(.home-page) .announcement {
   color: rgba(255, 255, 255, .6);
 }
 
+.blog-thumb.has-image {
+  padding: 0;
+  background: var(--navy);
+  overflow: hidden;
+}
+
+.blog-thumb.has-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease;
+}
+
+.blog-card:hover .blog-thumb.has-image img {
+  transform: scale(1.05);
+}
+
 .blog-body {
   padding: 24px;
   display: flex;
@@ -2580,6 +2598,25 @@ body:not(.home-page) .announcement {
   margin: 0;
   font-weight: 600;
   color: var(--navy);
+}
+
+.article-figure {
+  margin: 0 0 32px;
+}
+
+.article-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+.article-figure figcaption {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 10px;
 }
 
 .article-nav {
