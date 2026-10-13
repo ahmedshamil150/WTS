@@ -188,7 +188,8 @@ if (pageHero) {
     blog:     { name: 'blog',     background: '#162024', line: '#d8ffe1', glow: '#32825b', accent: '#9fe0a8' },
     contact:  { name: 'contact',  background: '#21111d', line: '#ffe0f0', glow: '#a4316a', accent: '#ff94c1' },
   };
-  const key = Object.keys(themes).find(k => pageName === k || pageName.startsWith(`${k}-`)) || 'about';
+  const key = Object.keys(themes).find(k => pageHero.classList.contains(`page-hero--${k}`))
+    || Object.keys(themes).find(k => pageName === k || pageName.startsWith(`${k}-`)) || 'about';
   const theme = themes[key];
   pageHero.classList.add(`page-hero--${theme.name}`);
   mountGhostFibers(pageHero, theme);
