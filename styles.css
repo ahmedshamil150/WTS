@@ -242,27 +242,26 @@ main[tabindex="-1"]:focus {
 
 @media (max-width: 600px) {
   .announcement {
-    height: auto;
+    height: 36px;
     min-height: 36px;
-    padding: 6px 16px;
-  }
-
-  .announcement {
-    flex-wrap: wrap;
-    row-gap: 4px;
+    padding: 0 16px;
+    flex-wrap: nowrap;
+    row-gap: 0;
   }
 
   .announcement-contact {
     gap: 12px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    min-width: 0;
   }
 
   .announcement-contact a {
     font-size: 9px;
+    white-space: nowrap;
   }
 
   .announcement-socials {
-    gap: 8px;
+    display: none;
   }
 }
 
