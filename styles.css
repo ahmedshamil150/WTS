@@ -30,6 +30,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -3391,4 +3392,36 @@ button {
   .page-hero {
     padding-inline: 18px;
   }
+}
+
+/* ── Touch press feedback ────────────────────────────────── */
+a,
+button,
+[role="menuitem"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:active {
+  opacity: .65;
+}
+
+.pill,
+.filter-btn,
+.mobile-menu-link,
+.blog-link,
+.lock-links a {
+  transition: transform .18s ease, opacity .18s ease, background .2s, color .2s, border-color .2s, box-shadow .2s;
+}
+
+.button:active,
+.pill-cta-button:active,
+.pill:active,
+.filter-btn:active,
+.lock-links a:active,
+.mobile-menu-link:active,
+.mobile-menu-button:active,
+.float-btn:active,
+.blog-link:active {
+  transform: scale(.95);
+  opacity: 1;
 }
